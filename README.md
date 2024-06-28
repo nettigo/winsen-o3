@@ -11,7 +11,7 @@ This is first MVP version:
 * each frame is read and reading is stored as sum (unsigned long) Make sure that measurement interval is not too long and 
  overflow does not happen
 
-``
+```
 #include "winsen-o3.h
 
 WinsenO3 sensor;
@@ -19,7 +19,7 @@ WinsenO3 sensor;
 void setup() {
   sensor.begin(RX_PIN, TX_PIN);
 }
-``
+```
 
 In `loop` call `sensor.process()` it will read and parse data. Then You can check if any data is available (`sensor.available()`) and 
 get average of readings via `sensor.currentValue()` and to know how many frames were 
